@@ -1,0 +1,56 @@
+{
+    "algorithm": {
+        "q_learning": {
+            "alpha": 0.15,
+            "gamma": 0.90,
+            "epsilon": 1.0,
+            "epsilon_decay": 0.99,
+            "epsilon_min": 0.1,
+            "episodes": 500
+        }
+    },
+    "ev": {
+        "count": 400,
+        "battery_capacity": 60,
+        "soc_min": 0.3,
+        "soc_max": 0.9,
+        "v2g_participation_rate": 0.3,
+        "battery_degradation_cost": 0.1,
+        "charging_power": 7,
+        "discharging_power": 7
+    },
+    "placement": {
+        "charger_count": 10,
+        "candidate_nodes": 15,
+
+        "weight_load": 0.6,
+        "weight_sensitivity": 0.4,
+
+        "pso_particles": 50,
+        "pso_max_iter": 100,
+        "pso_w": 0.7,
+        "pso_w_end": 0.3,
+        "pso_c1": 1.5,
+        "pso_c2": 1.5,
+
+        "csaps_particles": 50,
+        "csaps_max_iter": 150,
+        "csaps_w": 0.8,
+        "csaps_w_end": 0.4,
+        "csaps_c1": 1.6,
+        "csaps_c2": 1.6,
+        "csaps_T0": 0.05,
+        "csaps_T_min": 0.0001,
+        "csaps_alpha": 0.97
+    },
+    "grid": {
+        "base_voltage": 12.66,
+        "base_power": 1000,
+        "slack_bus": 1
+    },
+    "simulation": {
+        "time_steps": 24,
+        "base_load": [180, 170, 165, 160, 170, 200, 280, 350, 420, 380, 350, 320, 300, 320, 350, 400, 480, 520, 550, 480, 380, 300, 250, 210],
+        "electricity_price": [0.25, 0.25, 0.25, 0.25, 0.25, 0.35, 0.35, 0.70, 1.00, 0.70, 0.50, 0.50, 0.50, 0.50, 0.70, 0.80, 1.00, 1.20, 1.20, 1.00, 0.70, 0.50, 0.35, 0.25]
+    }
+}
